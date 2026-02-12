@@ -1,8 +1,11 @@
 const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-const header = document.querySelector('.header.container');
+const header = document.querySelector('#header');
 const body = document.body;
+
+// Set dynamic year
+document.getElementById('year').textContent = new Date().getFullYear();
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
@@ -70,3 +73,28 @@ if (savedMode === 'dark') {
 } else {
 	setMode('light');
 }
+
+// Scroll animations for sections
+const observerOptions = {
+	threshold: 0.15,
+	rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry, index) => {
+		if (entry.isIntersecting) {
+			setTimeout(() => {
+				entry.target.style.opacity = '1';
+				entry.target.style.transform = 'translateY(0)';
+			}, index * 100);
+		}
+	});
+}, observerOptions);
+
+const animatedElements = document.querySelectorAll('.service-item, .project-card, .edu-item, .exp-item, .cert-card, .contact-item');
+animatedElements.forEach(el => {
+	el.style.opacity = '0';
+	el.style.transform = 'translateY(50px)';
+	el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+	observer.observe(el);
+});

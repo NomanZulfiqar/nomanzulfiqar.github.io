@@ -131,7 +131,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
-	color: var(--text-main);
+	color: #ffffff;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
@@ -1465,6 +1465,18 @@ body {
 	#header .hamburger {
 		transform: scale(0.65);
 		margin-right: 0;
+	}
+}
+@media (max-width: 480px) {
+	#header .brand h1 {
+		font-size: 1.4rem;
+	}
+	#dark-mode-toggle {
+		font-size: 1.3rem;
+		padding: 3px 6px;
+	}
+	#header .hamburger {
+		transform: scale(0.55);
 	}
 }
 #dark-mode-toggle:focus {

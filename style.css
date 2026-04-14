@@ -1331,6 +1331,7 @@ p {
 	}
 	#header .nav-list ul li a {
 		font-size: 1.8rem;
+		color: var(--text-main);
 	}
 	#header .nav-list ul a:after {
 		display: none;

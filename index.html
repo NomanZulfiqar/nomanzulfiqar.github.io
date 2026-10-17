@@ -1,451 +1,1208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noman Zulfiqar — DevOps Engineer</title>
+  <meta name="description" content="Noman Zulfiqar is a DevOps Engineer and AWS Certified Solutions Architect in Lahore, running production infrastructure on AWS and Azure with Terraform, Kubernetes and CI/CD.">
+  <meta name="author" content="Noman Zulfiqar">
+  <meta name="theme-color" content="#171c24">
+  <link rel="canonical" href="https://nomanzulfiqar.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nomanzulfiqar.github.io/">
+  <meta property="og:title" content="Noman Zulfiqar — DevOps Engineer">
+  <meta property="og:description" content="AWS Certified Solutions Architect building production infrastructure on AWS & Azure with Terraform, Kubernetes and CI/CD.">
+  <meta property="og:image" content="https://nomanzulfiqar.github.io/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232ee6b6'/%3E%3Cstop offset='1' stop-color='%235aa8ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M8 22.5V9.5l8 13V9.5h8l-8 13h8' fill='none' stroke='%23062019' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='10' width='20' height='14' rx='3' fill='%235f72ff'/%3E%3Crect x='10' y='6' width='12' height='6' rx='2' fill='%23ffd600'/%3E%3Crect x='14' y='16' width='4' height='4' rx='1' fill='%23fff'/%3E%3C/svg%3E">
-  <title>NOMAN | PORTFOLIO</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Noman Zulfiqar",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://nomanzulfiqar.github.io/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+    "sameAs": ["https://www.linkedin.com/in/nomanzulfiqar/", "https://github.com/NomanZulfiqar"]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Header -->
-  <section id="header" style="position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; background: rgba(255,255,255,0.98) !important;">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>N</span>oman <span>Z</span>ulfiqar</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <svg class="hero-bg-shape1" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="60,10 110,110 10,110"/></svg>
-    <svg class="hero-bg-shape2" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="40" rx="70" ry="30"/></svg>
-    <svg class="hero-bg-shape3" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 Q50,0 100,30 T200,30"/></svg>
-    <svg class="hero-bg-shape4" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="80" height="80" rx="30"/></svg>
-    <div class="hero-bg-sphere sphere1"></div>
-    <div class="hero-bg-sphere sphere2"></div>
-    <div class="hero-bg-sphere sphere3"></div>
-    <div class="hero-bg-sphere sphere4"></div>
-    <div class="hero-bg-sphere sphere5"></div>
-    <div class="hero-box">
-      <h1 class="hero-title">Noman Zulfiqar</h1>
-      <h2 class="hero-role">Cloud DevOps Engineer</h2>
-      <div class="hero-summary">1+ Years of Experience | 10+ Successful Heavy Project Deliveries</div>
-      <div class="hero-vision-pill">
-        <span class="star">&#11088;</span> Vision: Providing top-quality, client-satisfying services to become the leading cloud and DevOps services provider <span class="star">&#11088;</span>
-      </div>
-      <div class="hero-stats-row">
-        <div class="stat">
-          <div class="stat-value">10+</div>
-          <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">100</div>
-          <div class="stat-label">On-Time Delivery %</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
-
-  
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./img/nomi.png" alt="img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Cloud Devops Engineer</h2>
-        <p>I am a DevOps engineer with expertise in automating CI/CD pipelines and optimizing infrastructure using AWS, Docker, and Kubernetes. I focus on streamlining software delivery, improving scalability, and ensuring efficient, reliable deployments. Passionate about bridging development and operations, I aim to drive innovation and efficiency in every project.</p>
-        <a href="./img/Noman_Zulfiqar_CV.pdf" download="Noman_Zulfiqar_CV.pdf" class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
-  <!-- Education & Experience Section -->
-  <section id="education-experience">
-    <div class="edu-exp container">
-      <div class="edu-exp-grid">
-        <!-- Education Section -->
-        <div class="edu-section">
-          <h1 class="section-title">Edu<span>ca</span>tion</h1>
-          <div class="edu-item">
-            <h2 class="edu-title">BS in Computer Science</h2>
-            <h3 class="edu-institution">University of Management & Technology</h3>
-            <p class="edu-period">November 2021 – June 2025 | Lahore</p>
-            <p class="edu-desc">• Comprehensive <strong>Computer Science</strong> degree with focus on <strong>software engineering</strong> and <strong>cloud computing</strong><br><br>• Core coursework: Data Structures, Algorithms, <strong>Database Systems</strong>, <strong>Operating Systems</strong>, Computer Networks<br><br>• Specialized training in <strong>DevOps practices</strong>, <strong>CI/CD pipelines</strong>, and <strong>infrastructure automation</strong><br><br>• Hands-on projects involving <strong>AWS cloud services</strong>, <strong>containerization</strong>, and <strong>microservices</strong><br><br>• Strong foundation in <strong>system design</strong> and <strong>scalability</strong></p>
-          </div>
-        </div>
-        
-        <!-- Experience Section -->
-        <div class="exp-section">
-          <h1 class="section-title">Expe<span>ri</span>ence</h1>
-          <div class="exp-item">
-            <h2 class="exp-title">DevOps Engineer</h2>
-            <h3 class="exp-company">Zpayso</h3>
-            <p class="exp-period">January 2026 – Present | Lahore</p>
-            <p class="exp-desc">• <strong>End-to-End Payment Gateway Platform</strong>: Designed and managed full-scale <strong>payment gateway</strong> with <strong>sandbox & production environments</strong>, covering merchant portal, database architecture, and cloud infrastructure. Built <strong>CI/CD pipelines</strong> enabling <strong>zero-downtime deployments</strong>, automated rollbacks, and intelligent monitoring.<br><br>
-          </div>
-          <div class="exp-item">
-            <h2 class="exp-title">Associate Cloud Engineer</h2>
-            <h3 class="exp-company">GenClouds</h3>
-            <p class="exp-period">April 2025 – Present | Lahore</p>
-            <p class="exp-desc">Worked on <strong>enterprise-level projects</strong> involving <strong>AWS infrastructure deployment</strong>, <strong>CI/CD automation</strong>, <strong>Terraform IaC</strong>, and <strong>containerization</strong> for diverse client requirements.</p>
-          </div>
-          <div class="exp-item">
-            <h2 class="exp-title">Cloud Engineer Intern</h2>
-            <h3 class="exp-company">GenClouds</h3>
-            <p class="exp-period">December 2024 – March 2025 | Lahore</p>
-            <p class="exp-desc">Prepared for <strong>AWS Solutions Architect Associate</strong> certification and practiced <strong>DevOps tools</strong> including <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>Jenkins</strong>, and <strong>Git</strong>.</p>
-          </div>
-        </div>
-
-        <!-- Certifications Section -->
-        <div class="cert-section">
-          <h1 class="section-title">Certi<span>fi</span>cations</h1>
-          <a href="https://www.credly.com/badges/43b74830-b1d6-4ba2-a5f7-adad20a526bd/" target="_blank" class="cert-card">
-            <div class="cert-icon-wrapper">
-              <div class="cert-icon">
-                <i class="fas fa-cloud"></i>
-                <div class="cert-badge">AWS</div>
-              </div>
-            </div>
-            <h2 class="cert-title">AWS Certified Solutions Architect</h2>
-            <p class="cert-level">Associate Level</p>
-            <div class="cert-tag">Associate</div>
-            <p class="cert-desc">• Expertise in designing <strong>scalable</strong>, <strong>highly available</strong>, and <strong>fault-tolerant systems</strong> on AWS<br><br>• Proficient in <strong>EC2</strong>, <strong>S3</strong>, <strong>RDS</strong>, <strong>Lambda</strong>, <strong>VPC</strong>, <strong>CloudFormation</strong>, and <strong>IAM</strong><br><br>• Deep understanding of <strong>architectural best practices</strong>, <strong>cost optimization</strong>, and <strong>security implementation</strong><br><br>• Skilled in <strong>disaster recovery</strong>, <strong>backup strategies</strong>, and <strong>performance optimization</strong><br><br>• Expertise in <strong>hybrid cloud</strong> and <strong>migration strategies</strong></p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Education & Experience Section -->
-
-  <!-- Service Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Passionate and innovative software engineer with a knack for developing high-quality, user-centric applications. Proficient in modern web technologies, with a proven track record of delivering impactful projects that enhance user experiences and drive business success.</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-code service-fa-icon"></i></div>
-          <h2>Frontend Development</h2>
-          <p>Build responsive, high-performance web apps using React.js, HTML, and CSS. Focused on modern UI/UX and seamless user experiences.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-cogs service-fa-icon"></i></div>
-          <h2>DevOps Engineering</h2>
-          <p>Automate and optimize deployments, CI/CD pipelines, and cloud infrastructure. Skilled in Docker, Kubernetes, and monitoring tools for efficient, reliable delivery.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-cloud service-fa-icon"></i></div>
-          <h2>AWS Cloud Solutions</h2>
-          <p>Design, deploy, and manage secure AWS architectures. Proficient in EC2, S3, Lambda, RDS, and serverless solutions for scalable business needs.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-project-diagram service-fa-icon"></i></div>
-          <h2>Infrastructure as Code</h2>
-          <p>Provision and manage infrastructure using Terraform and AWS CloudFormation. Ensure consistency, scalability, and rapid deployments.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fab fa-docker service-fa-icon"></i></div>
-          <h2>Docker & Kubernetes</h2>
-          <p>Containerize and orchestrate applications for scalability and reliability. Skilled in Docker, Kubernetes, and microservices architecture.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-sync-alt service-fa-icon"></i></div>
-          <h2>CI/CD Automation</h2>
-          <p>Implement robust CI/CD pipelines using GitHub Actions, Jenkins, and GitLab CI. Automate testing, building, and deployment for faster delivery.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-chart-line service-fa-icon"></i></div>
-          <h2>Cloud Monitoring</h2>
-          <p>Set up monitoring, logging, and alerting using AWS CloudWatch, Prometheus, and Grafana for proactive issue resolution and system health.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-terminal service-fa-icon"></i></div>
-          <h2>Scripting & Automation</h2>
-          <p>Automate repetitive tasks and workflows using Python and Bash scripting. Improve efficiency and reduce manual errors in operations.</p>
-        </div>
-        <div class="service-item">
-          <div class="icon"><i class="fas fa-shield-alt service-fa-icon"></i></div>
-          <h2>Security & Best Practices</h2>
-          <p>Apply security best practices for cloud and application infrastructure. Ensure compliance, data protection, and secure deployments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=450&q=80" alt="Azure Multi-Environment Infrastructure Migration">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Azure Multi-Environment Infrastructure Migration with Terraform Automation</h2>
-            <h3 class="project-subtitle">Terraform, Azure, AKS, Cosmos DB</h3>
-            <p class="project-desc">Migrated production infrastructure to Azure hub-spoke architecture across 4 subscriptions and 5 environments. Built 7 Terraform stacks managing 50+ resources (Cosmos DB 7TB, AKS, Redis, Service Bus, Azure Firewall). Achieved zero-downtime migration with Private Endpoints and Traffic Manager, ensuring 100% IaC coverage with automated CI/CD pipelines.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=450&q=80" alt="AWS Serverless CI/CD Pipeline">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">AWS Serverless CI/CD Pipeline</h2>
-            <h3 class="project-subtitle">Docker & Kubernetes</h3>
-            <p class="project-desc">Developed a scalable and cost-efficient serverless CI/CD pipeline using AWS services, Docker, and Kubernetes. The project automates the build, test, and deployment of microservices, leveraging AWS CodePipeline, CodeBuild, Lambda, and EKS. It also integrates real-time monitoring and logging for better visibility and management.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=450&q=80" alt="Quiz App">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Quiz App</h2>
-            <h3 class="project-subtitle">React.js</h3>
-            <p class="project-desc">Built an interactive quiz application using React. Enabled users to answer quiz questions and receive their results at the end. Focused on delivering a seamless user experience with real-time feedback and result calculation.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=450&q=80" alt="Food Ordering App">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Food Ordering App</h2>
-            <h3 class="project-subtitle">HTML, CSS, PHP, MySQL</h3>
-            <p class="project-desc">Developed a user-friendly food ordering application using HTML and CSS for the front end and MySQL with PHP for the back end. Implemented features for browsing menus and placing orders, enhancing the overall user experience and streamlining order management.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&h=450&q=80" alt="Rocket.Chat on AWS with ECS Fargate & MongoDB Atlas">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Rocket.Chat on AWS with ECS Fargate & MongoDB Atlas</h2>
-            <h3 class="project-subtitle">Terraform, AWS, MongoDB Atlas</h3>
-            <p class="project-desc">Deployed a scalable, secure Rocket.Chat platform using ECS Fargate and MongoDB Atlas. Managed infrastructure with Terraform, following AWS best practices for VPC peering, private subnets, and IAM roles.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&h=450&q=80" alt="WordPress on AWS EC2 with Azure Migration">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">WordPress on AWS EC2 with Azure Migration</h2>
-            <h3 class="project-subtitle">Terraform, AWS, Azure, Bash</h3>
-            <p class="project-desc">Provisioned WordPress on Ubuntu EC2 using Terraform and automated scripts. Successfully executed a Lift-and-Shift migration to Microsoft Azure, ensuring data integrity and minimal downtime.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=450&q=80" alt="WireGuard VPN on Windows Server with Ubuntu Client">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">WireGuard VPN on Windows Server with Ubuntu Client</h2>
-            <h3 class="project-subtitle">AWS, Windows Server, Ubuntu, WireGuard</h3>
-            <p class="project-desc">Configured a WireGuard VPN server on AWS (Windows Server 2022) with a preconfigured Ubuntu client. Enabled encrypted remote access using ICS and static routing for private network tunneling.</p>
-            </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&h=450&q=80" alt="Microsoft Intune MDM Rollout (200 Users, M365 E3)">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Microsoft Intune MDM Rollout (200 Users, M365 E3)</h2>
-            <h3 class="project-subtitle">Microsoft Intune, M365 E3, PowerPoint, WBS</h3>
-            <p class="project-desc">Planned and documented a full Microsoft Intune MDM deployment for 200 users. Delivered a detailed roadmap, PowerPoint, and WBS action plan covering enrollment, policies, and compliance setup.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&h=450&q=80" alt="AWS S3 MVP for Scientific Data Sharing">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">AWS S3 MVP for Scientific Data Sharing</h2>
-            <h3 class="project-subtitle">AWS S3, VPN, Transit Gateway</h3>
-            <p class="project-desc">Built an S3-based MVP to share 30 GB of scientific data across 10+ partners. Integrated with on-prem VPN and AWS Transit Gateway, providing secure, low-maintenance data access without compute resources.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&h=450&q=80" alt="Communication Platform Migration">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Communication Platform Migration</h2>
-            <h3 class="project-subtitle">Skype to Discord</h3>
-            <p class="project-desc">Migrated communication channels from Skype to Discord, enhancing collaboration and reducing licensing costs.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=450&q=80" alt="Zero Trust Hyperledger Fabric on AWS">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">Zero Trust Hyperledger Fabric on AWS</h2>
-            <h3 class="project-subtitle">Blockchain, AWS, Terraform</h3>
-            <p class="project-desc">Designed and implemented a secure, enterprise-grade blockchain infrastructure using Zero Trust principles. Built automated Infrastructure-as-Code (IaC) deployment for a multi-organization Hyperledger Fabric network with decentralized identity management on AWS.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&h=450&q=80" alt="AlphaPlus LMS Infrastructure">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">AlphaPlus - Learning Management System Infrastructure</h2>
-            <h3 class="project-subtitle">Terraform, AWS ECS, RDS Aurora</h3>
-            <p class="project-desc">Built scalable AWS infrastructure for AlphaPlus LMS serving 100+ schools using Terraform IaC. Deployed multi-environment architecture with ECS Fargate, RDS Aurora, EFS, and load balancers, managing 109+ resources with automated CI/CD pipelines for seamless student-teacher portal operations.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-img">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=450&q=80" alt="ArgoCD GitOps on AWS EKS">
-          </div>
-          <div class="project-card-body">
-            <h2 class="project-title">ArgoCD GitOps on AWS EKS</h2>
-            <h3 class="project-subtitle">Kubernetes, ArgoCD, AWS EKS</h3>
-            <p class="project-desc">Deployed production-ready ArgoCD on AWS EKS with SSL/TLS termination, IAM RBAC policies, and persistent Redis storage for automated continuous deployment workflows.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>Info</span></h1>
-      </div>
-      <div class="contact-items">
-        
-        <!-- Phone Div Clickable -->
-        <a href="tel:+923314748582" class="contact-item">
-          <div class="icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+92 331 4748582</h2>
-          </div>
-        </a>
-
-        <!-- Email Div Clickable -->
-        <a href="mailto:chnoman1213@gmail.com" class="contact-item">
-          <div class="icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>chnoman1213@gmail.com</h2>
-          </div>
-        </a>
-
-        <!-- Address (Static, Non-Clickable) -->
-        <div class="contact-item">
-          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Raiwind Road, Lahore, Pakistan</h2>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>N</span>oman <span>Z</span>ulfiqar</h1>
-      </div>
-      
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="https://www.facebook.com/noman.prince.779857"><i class="fab fa-facebook"></i></a>
-        </div>
-        <div class="social-item">
-          <a href="https://www.instagram.com/emm_nomi/"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="social-item">
-          <a href="https://www.linkedin.com/in/nomanzulfiqar/"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="social-item">
-          <a href="https://github.com/NomanZulfiqar"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-      <p id="copyright">Copyright © <span id="year"></span> Noman. All rights reserved</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
-  <svg width="0" height="0" style="position:absolute;visibility:hidden;">
+  <!-- Shared SVG defs for architecture diagrams -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <linearGradient id="shape1-gradient-light" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#aee1f9"/>
-        <stop offset="100%" stop-color="#b2e0ff"/>
+      <linearGradient id="nz-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#2ee6b6" />
+        <stop offset="1" stop-color="#5aa8ff" />
       </linearGradient>
-      <linearGradient id="shape1-gradient-dark" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#23243a"/>
-        <stop offset="100%" stop-color="#5f72ff"/>
-      </linearGradient>
-      <radialGradient id="shape2-gradient-light" cx="0.5" cy="0.5" r="0.5">
-        <stop offset="0%" stop-color="#ffe29f"/>
-        <stop offset="100%" stop-color="#b2ffd6"/>
-      </radialGradient>
-      <radialGradient id="shape2-gradient-dark" cx="0.5" cy="0.5" r="0.5">
-        <stop offset="0%" stop-color="#181c2b"/>
-        <stop offset="100%" stop-color="#00d4ff"/>
-      </radialGradient>
-      <linearGradient id="shape4-gradient-light" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#5f72ff"/>
-        <stop offset="100%" stop-color="#ffd600"/>
-      </linearGradient>
-      <linearGradient id="shape4-gradient-dark" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#00d4ff"/>
-        <stop offset="100%" stop-color="#ffd600"/>
-      </linearGradient>
+      <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path class="dg-head" d="M0,0 L10,5 L0,10 z" />
+      </marker>
+      <marker id="arw-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path class="dg-head-a" d="M0,0 L10,5 L0,10 z" />
+      </marker>
     </defs>
   </svg>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="logo" aria-label="Noman Zulfiqar — home">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#nz-grad)" /><path d="M8 22.5V9.5l8 13V9.5h8l-8 13h8" fill="none" stroke="#062019" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <span class="logo-text">Noman Zulfiqar</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Switch color theme">
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        </button>
+        <a href="./img/Noman_Zulfiqar_CV.pdf" class="btn btn-sm btn-ghost nav-cv" download>Resume</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <a href="#experience" class="status-pill reveal">
+            <span class="pill-avatar"><img src="./img/noman.webp" alt="" width="28" height="28"><span class="dot"></span></span>
+            DevOps Engineer at Zpayso
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <p class="hero-hello mono reveal">Hi, I'm Noman Zulfiqar —</p>
+          <h1 class="hero-title reveal">
+            I build cloud infrastructure that <span class="hl">ships safely</span> and <span class="hl">scales quietly.</span>
+          </h1>
+          <p class="hero-sub reveal">
+            DevOps Engineer and <strong>AWS Certified Solutions Architect</strong>.
+            I run production infrastructure on AWS and Azure with Terraform, Kubernetes and CI/CD.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a href="#work" class="btn btn-primary">View my work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="./img/Noman_Zulfiqar_CV.pdf" class="btn btn-ghost" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download resume
+            </a>
+          </div>
+
+          <ul class="hero-social reveal" aria-label="Profiles">
+            <li><a href="https://www.linkedin.com/in/nomanzulfiqar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/NomanZulfiqar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:chnoman1213@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="hero-social-note mono">Lahore, PK · UTC+5</li>
+          </ul>
+        </div>
+
+        <!-- Terminal -->
+        <div class="hero-visual reveal">
+        <div class="terminal" aria-label="Terminal showing a Terraform deployment">
+          <div class="terminal-bar">
+            <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+            <span class="terminal-title mono">noman@prod: ~/infra</span>
+          </div>
+          <pre class="terminal-body mono" id="terminal"><span class="line"><span class="p">$</span> whoami</span>
+<span class="line o">devops engineer · aws certified sa</span>
+<span class="line"><span class="p">$</span> terraform plan -out=prod.tfplan</span>
+<span class="line o">Plan: <span class="g">109 to add</span>, 0 to change, 0 to destroy.</span>
+<span class="line"><span class="p">$</span> terraform apply prod.tfplan</span>
+<span class="line o"><span class="g">Apply complete!</span> Resources: 109 added.</span>
+<span class="line"><span class="p">$</span> kubectl rollout status deploy/api</span>
+<span class="line o">deployment "api" <span class="g">successfully rolled out</span></span>
+<span class="line"><span class="p">$</span> <span class="cursor"></span></span></pre>
+          <div class="terminal-status mono" aria-hidden="true">
+            <span class="ts-ok"><i class="fa-solid fa-circle-check"></i> all checks passed</span>
+            <span><i class="fa-solid fa-code-branch"></i> main</span>
+            <span class="ts-right"><span class="ts-dot"></span> prod · healthy</span>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="container">
+        <dl class="stats reveal">
+          <div class="stat">
+            <dt>Projects delivered</dt>
+            <dd><span class="count" data-to="15">15</span>+</dd>
+          </div>
+          <div class="stat">
+            <dt>Terraform resources managed</dt>
+            <dd><span class="count" data-to="109">109</span>+</dd>
+          </div>
+          <div class="stat">
+            <dt>Migrated with zero downtime</dt>
+            <dd><span class="count" data-to="7">7</span>&nbsp;TB</dd>
+          </div>
+          <div class="stat">
+            <dt>Schools served</dt>
+            <dd><span class="count" data-to="100">100</span>+</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Tech marquee -->
+      <div class="marquee" aria-label="Technologies I work with">
+        <div class="marquee-track">
+          <span><i class="fa-brands fa-aws"></i>AWS</span><span><i class="fa-brands fa-microsoft"></i>Azure</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></svg>Terraform</span><span><i class="fa-solid fa-dharmachakra"></i>Kubernetes</span><span><i class="fa-brands fa-docker"></i>Docker</span><span><i class="fa-brands fa-github"></i>GitHub Actions</span><span><i class="fa-brands fa-gitlab"></i>GitLab CI</span><span><i class="fa-brands fa-jenkins"></i>Jenkins</span><span><i class="fa-brands fa-linux"></i>Linux</span><span><i class="fa-brands fa-ubuntu"></i>Ubuntu</span><span><i class="fa-brands fa-python"></i>Python</span><span><i class="fa-brands fa-cloudflare"></i>Cloudflare</span>
+          <span aria-hidden="true"><i class="fa-brands fa-aws"></i>AWS</span><span aria-hidden="true"><i class="fa-brands fa-microsoft"></i>Azure</span><span aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></svg>Terraform</span><span aria-hidden="true"><i class="fa-solid fa-dharmachakra"></i>Kubernetes</span><span aria-hidden="true"><i class="fa-brands fa-docker"></i>Docker</span><span aria-hidden="true"><i class="fa-brands fa-github"></i>GitHub Actions</span><span aria-hidden="true"><i class="fa-brands fa-gitlab"></i>GitLab CI</span><span aria-hidden="true"><i class="fa-brands fa-jenkins"></i>Jenkins</span><span aria-hidden="true"><i class="fa-brands fa-linux"></i>Linux</span><span aria-hidden="true"><i class="fa-brands fa-ubuntu"></i>Ubuntu</span><span aria-hidden="true"><i class="fa-brands fa-python"></i>Python</span><span aria-hidden="true"><i class="fa-brands fa-cloudflare"></i>Cloudflare</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="portrait-wrap reveal">
+        <figure class="portrait">
+            <picture>
+              <source srcset="./img/noman.webp" type="image/webp">
+              <img src="./img/noman.jpg" alt="Portrait of Noman Zulfiqar" width="720" height="957" loading="lazy">
+            </picture>
+            <figcaption class="mono"><span class="dot"></span> Lahore, Pakistan</figcaption>
+          </figure>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal">01 — About</p>
+          <h2 class="section-title reveal">Reliable cloud platforms, built as code.</h2>
+          <p class="lead reveal">
+            I design, automate and run infrastructure on <strong>AWS</strong> and <strong>Azure</strong> —
+            Terraform for everything, Kubernetes for workloads, pipelines that ship with zero downtime,
+            and a runbook for every system I hand over.
+          </p>
+          <ul class="principles reveal">
+            <li><i class="fa-solid fa-code" aria-hidden="true"></i> Everything as code</li>
+            <li><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Every deploy reversible</li>
+            <li><i class="fa-solid fa-book-open" aria-hidden="true"></i> Documented handovers</li>
+          </ul>
+
+          <ul class="facts reveal">
+            <li>
+              <span class="fact-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+              <span><small>Current role</small>DevOps Engineer, Zpayso</span>
+            </li>
+            <li>
+              <span class="fact-icon"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+              <span><small>Certified</small>AWS Solutions Architect</span>
+            </li>
+            <li>
+              <span class="fact-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+              <span><small>Education</small>BS Computer Science, UMT</span>
+            </li>
+            <li>
+              <span class="fact-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span>
+              <span><small>Open to</small>Full-time, part-time &amp; freelance</span>
+            </li>
+          </ul>
+
+          <div class="reveal about-cta">
+            <a href="./img/Noman_Zulfiqar_CV.pdf" class="btn btn-primary" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download resume</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">02 — Experience</p>
+          <h2 class="section-title reveal">Where I've worked</h2>
+        </header>
+
+        <!-- At a glance -->
+        <div class="glance reveal">
+          <div class="glance-item">
+            <span class="glance-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+            <div><b id="exp-duration">1 yr 10 mo</b><small>in production cloud roles</small></div>
+          </div>
+          <div class="glance-item">
+            <span class="glance-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></span>
+            <div><b>4 months</b><small>intern → associate promotion</small></div>
+          </div>
+          <div class="glance-item">
+            <span class="glance-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
+            <div><b>2 companies</b><small>consulting &amp; fintech</small></div>
+          </div>
+          <div class="glance-item">
+            <span class="glance-icon aws"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+            <div><b>AWS SA</b><small>certified, Associate</small></div>
+          </div>
+        </div>
+
+        <!-- Timeline chart -->
+        <div class="gantt card reveal" style="--today: 96.09%">
+          <div class="gantt-head">
+            <p class="mono">career.timeline</p>
+            <ul class="gantt-key mono">
+              <li><i class="k-live"></i>current</li>
+              <li><i class="k-job"></i>experience</li>
+              <li><i class="k-edu"></i>education</li>
+            </ul>
+          </div>
+          <div class="g-grid">
+            <div class="g-row g-axis-row">
+              <div class="g-label"></div>
+              <div class="g-axis mono"><span style="left: 6.25%">2022</span><span style="left: 25.00%">2023</span><span style="left: 43.75%">2024</span><span style="left: 62.50%">2025</span><span style="left: 81.25%">2026</span><span class="g-today" style="left: var(--today)">today</span></div>
+            </div>
+              <div class="g-row">
+                <div class="g-label"><strong>DevOps Engineer</strong><small class="mono">Zpayso · part-time</small></div>
+                <div class="g-track"><span class="g-bar g-live" style="--s: 81.25%; --w: 15.62%" title="Jan 2026 — now"></span></div>
+              </div>
+              <div class="g-row">
+                <div class="g-label"><strong>Associate Cloud Engineer</strong><small class="mono">GenClouds</small></div>
+                <div class="g-track"><span class="g-bar g-job" style="--s: 67.19%; --w: 25.00%" title="Apr 2025 — Jul 2026"></span></div>
+              </div>
+              <div class="g-row">
+                <div class="g-label"><strong>Cloud Engineer Intern</strong><small class="mono">GenClouds</small></div>
+                <div class="g-track"><span class="g-bar g-job" style="--s: 60.94%; --w: 6.25%" title="Dec 2024 — Mar 2025"></span></div>
+              </div>
+              <div class="g-row">
+                <div class="g-label"><strong>BS Computer Science</strong><small class="mono">UMT Lahore</small></div>
+                <div class="g-track"><span class="g-bar g-edu" style="--s: 3.12%; --w: 68.75%" title="Nov 2021 — Jun 2025"></span></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="exp-grid">
+          <div class="jobs">
+            <!-- Zpayso -->
+            <article class="job card spot reveal">
+              <header class="job-head">
+                <span class="job-logo mono">Z</span>
+                <div class="job-co">
+                  <h3>Zpayso</h3>
+                  <p>Payment gateway · Lahore</p>
+                </div>
+                <span class="job-dur mono is-live"><span class="dot"></span> Current</span>
+              </header>
+
+              <ol class="roles">
+                <li class="role is-current">
+                  <div class="role-head">
+                    <h4>DevOps Engineer <span class="tag-promo tag-muted mono">part-time</span></h4>
+                    <span class="role-date mono">Jan 2026 — Present</span>
+                  </div>
+                  <ul class="kpis">
+                    <li><b>24/7</b><span>payment availability</span></li>
+                    <li><b>5</b><span>EC2 servers owned</span></li>
+                    <li><b>PCI DSS</b><span>compliance alerting</span></li>
+                  </ul>
+                  <ul class="role-points">
+                    <li>Own the AWS infrastructure of a live payment gateway — sandbox and production.</li>
+                    <li>GitHub Actions CI/CD with <strong>zero-downtime deploys</strong> and automated rollbacks.</li>
+                    <li>Serverless month-end DB archival with EventBridge, Lambda and Python.</li>
+                  </ul>
+                  <ul class="chips sm"><li>EC2</li><li>RDS MySQL</li><li>Lambda</li><li>GitHub Actions</li><li>Security Hub</li></ul>
+                </li>
+              </ol>
+            </article>
+
+            <!-- GenClouds -->
+            <article class="job card spot reveal">
+              <header class="job-head">
+                <span class="job-logo mono">G</span>
+                <div class="job-co">
+                  <h3>GenClouds</h3>
+                  <p>Cloud consultancy · Lahore</p>
+                </div>
+                <span class="job-dur mono">1 yr 8 mo</span>
+              </header>
+
+              <ol class="roles">
+                <li class="role">
+                  <div class="role-head">
+                    <h4>Associate Cloud Engineer <span class="tag-promo mono">promoted</span></h4>
+                    <span class="role-date mono">Apr 2025 — Jul 2026</span>
+                  </div>
+                  <ul class="kpis">
+                    <li><b>7 TB</b><span>migrated, zero downtime</span></li>
+                    <li><b>EKS 1.35</b><span>upgraded live</span></li>
+                    <li><b>109+</b><span>Terraform resources</span></li>
+                  </ul>
+                  <ul class="role-points">
+                    <li>Delivered AWS and Azure platforms for external clients, working directly with their stakeholders.</li>
+                    <li>Terraform on every project, with runbooks and technical documentation for each handover.</li>
+                  </ul>
+                  <ul class="chips sm"><li>AWS</li><li>Azure</li><li>Terraform</li><li>EKS</li><li>ArgoCD</li></ul>
+                </li>
+                <li class="role">
+                  <div class="role-head">
+                    <h4>Cloud Engineer Intern</h4>
+                    <span class="role-date mono">Dec 2024 — Mar 2025</span>
+                  </div>
+                  <ul class="role-points">
+                    <li>Earned the AWS Solutions Architect – Associate certification while building foundations in CI/CD and automation.</li>
+                  </ul>
+                </li>
+              </ol>
+            </article>
+          </div>
+
+          <aside class="exp-aside">
+            <a class="cert card spot reveal" href="https://www.credly.com/badges/43b74830-b1d6-4ba2-a5f7-adad20a526bd/" target="_blank" rel="noopener">
+              <div class="cert-top">
+                <span class="cert-icon"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+                <span class="badge mono"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> verified</span>
+              </div>
+              <p class="eyebrow">Certification</p>
+              <h3>AWS Certified Solutions Architect — Associate</h3>
+              <span class="link-arrow">Verify on Credly <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+            </a>
+
+            <div class="edu card spot reveal">
+              <div class="cert-top">
+                <span class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                <span class="role-date mono">2021 — 2025</span>
+              </div>
+              <p class="eyebrow">Education</p>
+              <h3>BS Computer Science</h3>
+              <p class="edu-school">University of Management &amp; Technology, Lahore</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head skills-head">
+          <div>
+            <p class="eyebrow reveal">03 — Skills</p>
+            <h2 class="section-title reveal">Technical skills</h2>
+          </div>
+          <ul class="level-key mono reveal" aria-label="Rating scale">
+            <li><span class="meter" data-level="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Expert</li>
+            <li><span class="meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Advanced</li>
+            <li><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Proficient</li>
+          </ul>
+        </header>
+
+        <p class="skills-label mono reveal">Core stack</p>
+        <div class="core-grid">
+          <div class="core-tile card spot reveal" style="--brand: #ff9900; --pct: 1.0">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+            </div>
+            <h3>AWS</h3>
+            <p class="mono">Expert</p>
+          </div>
+          <div class="core-tile card spot reveal" style="--brand: #844fba; --pct: 1.0">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></svg></span>
+            </div>
+            <h3>Terraform</h3>
+            <p class="mono">Expert</p>
+          </div>
+          <div class="core-tile card spot reveal" style="--brand: #326ce5; --pct: 0.8">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><i class="fa-solid fa-dharmachakra" aria-hidden="true"></i></span>
+            </div>
+            <h3>Kubernetes</h3>
+            <p class="mono">Advanced</p>
+          </div>
+          <div class="core-tile card spot reveal" style="--brand: #2496ed; --pct: 1.0">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></span>
+            </div>
+            <h3>Docker</h3>
+            <p class="mono">Expert</p>
+          </div>
+          <div class="core-tile card spot reveal" style="--brand: var(--text); --pct: 1.0">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+            </div>
+            <h3>GitHub Actions</h3>
+            <p class="mono">Expert</p>
+          </div>
+          <div class="core-tile card spot reveal" style="--brand: #f5c518; --pct: 1.0">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle class="ring-bg" cx="40" cy="40" r="34" /><circle class="ring-fg" cx="40" cy="40" r="34" /></svg>
+              <span class="ring-icon"><i class="fa-brands fa-linux" aria-hidden="true"></i></span>
+            </div>
+            <h3>Linux</h3>
+            <p class="mono">Expert</p>
+          </div>
+        </div>
+
+        <p class="skills-label mono reveal">By category</p>
+        <div class="skills-grid">
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span>Cloud</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>AWS</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Azure</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Cloudflare</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>Infrastructure as Code</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>Terraform</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>CloudFormation</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Ansible</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></span>Containers</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>Docker</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Kubernetes</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Helm</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>ArgoCD</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>CI/CD</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>GitHub Actions</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>GitLab CI/CD</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Jenkins</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-brands fa-linux" aria-hidden="true"></i></span>Linux &amp; servers</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>Linux</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Nginx</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Apache</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>Databases</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>MySQL / RDS</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Redis / Valkey</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>MongoDB Atlas</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>Monitoring</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>CloudWatch</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Prometheus</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Grafana</span><small class="mono">Proficient</small></div>
+                <span class="meter" data-level="3" role="img" aria-label="Proficient, 3 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+          <article class="skill-card card spot reveal">
+            <h3><span class="skill-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>Security &amp; scripting</h3>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-row"><span>IAM &amp; least privilege</span><small class="mono">Expert</small></div>
+                <span class="meter" data-level="5" role="img" aria-label="Expert, 5 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Bash</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+              <li>
+                <div class="skill-row"><span>Python</span><small class="mono">Advanced</small></div>
+                <span class="meter" data-level="4" role="img" aria-label="Advanced, 4 of 5"><i></i><i></i><i></i><i></i><i></i></span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="aws-panel card reveal">
+          <div class="aws-panel-head">
+            <span class="aws-logo"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+            <div>
+              <h3>AWS in production</h3>
+              <p>20 services I run day to day — across compute, networking, data and security.</p>
+            </div>
+          </div>
+          <div class="aws-groups">
+            <div class="aws-group" style="--cat: #ed7100">
+              <p class="aws-group-title mono">Compute &amp; containers</p>
+              <ul>
+                <li><span class="svc-icon mono">EC2</span>EC2</li>
+                <li><span class="svc-icon mono">λ</span>Lambda</li>
+                <li><span class="svc-icon mono">ECS</span>ECS Fargate</li>
+                <li><span class="svc-icon mono">EKS</span>EKS</li>
+                <li><span class="svc-icon mono">ECR</span>ECR</li>
+              </ul>
+            </div>
+            <div class="aws-group" style="--cat: #8c4fff">
+              <p class="aws-group-title mono">Networking &amp; delivery</p>
+              <ul>
+                <li><span class="svc-icon mono">VPC</span>VPC</li>
+                <li><span class="svc-icon mono">R53</span>Route 53</li>
+                <li><span class="svc-icon mono">CF</span>CloudFront</li>
+                <li><span class="svc-icon mono">ELB</span>ALB / NLB</li>
+                <li><span class="svc-icon mono">ACM</span>ACM</li>
+              </ul>
+            </div>
+            <div class="aws-group" style="--cat: #7aa116">
+              <p class="aws-group-title mono">Data &amp; storage</p>
+              <ul>
+                <li><span class="svc-icon mono">S3</span>S3</li>
+                <li><span class="svc-icon mono">RDS</span>RDS · Aurora</li>
+                <li><span class="svc-icon mono">EFS</span>EFS</li>
+                <li><span class="svc-icon mono">EC</span>ElastiCache</li>
+                <li><span class="svc-icon mono">MB</span>Managed Blockchain</li>
+              </ul>
+            </div>
+            <div class="aws-group" style="--cat: #e7157b">
+              <p class="aws-group-title mono">Operations &amp; security</p>
+              <ul>
+                <li><span class="svc-icon mono">CW</span>CloudWatch</li>
+                <li><span class="svc-icon mono">EB</span>EventBridge</li>
+                <li><span class="svc-icon mono">IAM</span>IAM</li>
+                <li><span class="svc-icon mono">COG</span>Cognito</li>
+                <li><span class="svc-icon mono">SH</span>Security Hub</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">04 — Services</p>
+          <h2 class="section-title reveal">What I can help you with</h2>
+          <p class="section-sub reveal">From a blank cloud account to a production platform your team can trust.</p>
+        </header>
+
+        <div class="bento">
+          <!-- Cloud architecture -->
+          <article class="bento-card wide card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span>
+              <h3>Cloud architecture</h3>
+              <p>Secure, cost-aware AWS and Azure designs — multi-AZ networks, multi-environment setups and migrations.</p>
+            </div>
+            <div class="bento-visual viz-arch" aria-hidden="true">
+              <div class="az"><span class="mono">az-a</span><i class="sn pub">public</i><i class="sn prv">private</i><i class="sn db">data</i></div>
+              <div class="az"><span class="mono">az-b</span><i class="sn pub">public</i><i class="sn prv">private</i><i class="sn db">data</i></div>
+              <div class="az"><span class="mono">az-c</span><i class="sn pub">public</i><i class="sn prv">private</i><i class="sn db">data</i></div>
+            </div>
+          </article>
+
+          <!-- IaC -->
+          <article class="bento-card card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+              <h3>Infrastructure as Code</h3>
+              <p>Reusable Terraform modules — every environment reproducible from code.</p>
+            </div>
+            <pre class="bento-visual viz-code mono" aria-hidden="true"><span class="k">module</span> <span class="s">"platform"</span> {
+  source = <span class="s">"./modules/eks"</span>
+  env    = <span class="s">"prod"</span>
+}
+<span class="c">$ terraform plan</span>
+<span class="g">No changes.</span> <span class="c">Infra is up-to-date.</span></pre>
+          </article>
+
+          <!-- Containers -->
+          <article class="bento-card card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></span>
+              <h3>Containers &amp; Kubernetes</h3>
+              <p>Workloads on EKS, AKS or ECS Fargate — autoscaled and Helm-packaged.</p>
+            </div>
+            <div class="bento-visual viz-pods" aria-hidden="true">
+              <div class="pods"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <p class="mono"><span class="ok">●</span> 16/16 pods running</p>
+            </div>
+          </article>
+
+          <!-- CI/CD -->
+          <article class="bento-card wide card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>
+              <h3>CI/CD &amp; GitOps</h3>
+              <p>Pipelines that test and ship on every push — zero-downtime releases and automatic rollback.</p>
+            </div>
+            <div class="bento-visual viz-pipe" aria-hidden="true">
+              <ol class="stages mono">
+                <li><span><i class="fa-solid fa-code-commit"></i></span>commit</li>
+                <li><span><i class="fa-solid fa-hammer"></i></span>build</li>
+                <li><span><i class="fa-solid fa-vial"></i></span>test</li>
+                <li><span><i class="fa-solid fa-cubes"></i></span>stage</li>
+                <li class="live"><span><i class="fa-solid fa-rocket"></i></span>prod</li>
+              </ol>
+              <p class="mono pipe-note"><span class="ok">✓</span> zero-downtime deploy · rollback ready</p>
+            </div>
+          </article>
+
+          <!-- Observability -->
+          <article class="bento-card wide card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+              <h3>Observability</h3>
+              <p>Metrics, logs, alerts and runbooks that catch issues before your users do.</p>
+            </div>
+            <div class="bento-visual viz-chart" aria-hidden="true">
+              <div class="chart-head mono"><span>requests / min</span><span class="ok">● healthy</span></div>
+              <svg viewBox="0 0 300 90" preserveAspectRatio="none">
+                <defs><linearGradient id="spark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35" /><stop offset="1" stop-color="var(--accent)" stop-opacity="0" /></linearGradient></defs>
+                <path class="spark-fill" d="M0 62 L20 55 L40 60 L60 44 L80 50 L100 36 L120 42 L140 30 L160 38 L180 26 L200 34 L220 22 L240 30 L260 18 L280 24 L300 14 L300 90 L0 90 Z" />
+                <path class="spark-line" d="M0 62 L20 55 L40 60 L60 44 L80 50 L100 36 L120 42 L140 30 L160 38 L180 26 L200 34 L220 22 L240 30 L260 18 L280 24 L300 14" />
+                <line class="spark-th" x1="0" y1="8" x2="300" y2="8" />
+              </svg>
+            </div>
+          </article>
+
+          <!-- Security -->
+          <article class="bento-card card spot reveal">
+            <div class="bento-copy">
+              <span class="service-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+              <h3>Security &amp; compliance</h3>
+              <p>Hardened servers and least-privilege access by default.</p>
+            </div>
+            <ul class="bento-visual viz-check mono" aria-hidden="true">
+              <li><i class="fa-solid fa-check"></i> IAM least privilege</li>
+              <li><i class="fa-solid fa-check"></i> TLS everywhere</li>
+              <li><i class="fa-solid fa-check"></i> PCI DSS alerting</li>
+              <li><i class="fa-solid fa-check"></i> fail2ban hardening</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Work ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">05 — Selected work</p>
+          <h2 class="section-title reveal">Case studies</h2>
+          <p class="section-sub reveal">Production systems I've designed and delivered — pick one to see how it's built.</p>
+        </header>
+
+        <div class="showcase reveal">
+          <div class="case-tabs" role="tablist" aria-label="Case studies">
+            <button class="case-tab" role="tab" id="case-tab-1" aria-controls="case-1" aria-selected="true">
+              <span class="tab-num mono">01</span>
+              <span class="tab-text"><strong>Payment gateway on AWS</strong><small class="mono">Fintech · AWS</small></span>
+              <i class="fa-solid fa-arrow-right tab-arrow" aria-hidden="true"></i>
+            </button>
+            <button class="case-tab" role="tab" id="case-tab-2" aria-controls="case-2" aria-selected="false" tabindex="-1">
+              <span class="tab-num mono">02</span>
+              <span class="tab-text"><strong>EKS platform &amp; upgrades</strong><small class="mono">Platform · Kubernetes</small></span>
+              <i class="fa-solid fa-arrow-right tab-arrow" aria-hidden="true"></i>
+            </button>
+            <button class="case-tab" role="tab" id="case-tab-3" aria-controls="case-3" aria-selected="false" tabindex="-1">
+              <span class="tab-num mono">03</span>
+              <span class="tab-text"><strong>Azure hub-spoke migration</strong><small class="mono">Migration · Azure</small></span>
+              <i class="fa-solid fa-arrow-right tab-arrow" aria-hidden="true"></i>
+            </button>
+            <button class="case-tab" role="tab" id="case-tab-4" aria-controls="case-4" aria-selected="false" tabindex="-1">
+              <span class="tab-num mono">04</span>
+              <span class="tab-text"><strong>LMS for 100+ schools</strong><small class="mono">EdTech · AWS</small></span>
+              <i class="fa-solid fa-arrow-right tab-arrow" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="case-panels">
+          <article class="case-panel" role="tabpanel" id="case-1" aria-labelledby="case-tab-1">
+            <header class="panel-head">
+              <div>
+                <p class="eyebrow">Fintech · Zpayso · 2026</p>
+                <h3>Payment gateway infrastructure on AWS</h3>
+              </div>
+              <span class="case-num mono">01<span>/04</span></span>
+            </header>
+            <div class="case-visual card">
+              <div class="case-visual-bar mono"><span class="cv-file"><i class="fa-regular fa-file-code" aria-hidden="true"></i> payment-gateway.svg</span><span class="cv-live"><span class="dot"></span> live</span></div>
+              <svg class="dg" viewBox="0 0 600 360" role="img" aria-label="Diagram: merchants reach the payment API on EC2 inside a VPC alongside the merchant portal, redirect service, merchant bot and an archival server, all backed by RDS MySQL. GitHub Actions deploys; EventBridge and Lambda trigger month-end archival; ElastiCache, CloudWatch and Security Hub support the platform.">
+              <rect class="zone" x="150" y="20" width="300" height="238" rx="14" />
+              <text class="zl" x="166" y="42">VPC · 5 × EC2 · sandbox + prod</text>
+
+              <g class="n"><rect x="16" y="60" width="110" height="46" rx="10" /><text class="t" x="71" y="88" text-anchor="middle">Merchants</text></g>
+              <g class="n"><rect x="16" y="188" width="110" height="46" rx="10" /><text class="t" x="71" y="208" text-anchor="middle">GitHub Actions</text><text x="71" y="224" text-anchor="middle">CI/CD</text></g>
+
+              <g class="n acc"><rect x="170" y="60" width="124" height="46" rx="10" /><text class="t" x="232" y="88" text-anchor="middle">Payment API</text></g>
+              <g class="n"><rect x="170" y="124" width="124" height="46" rx="10" /><text class="t" x="232" y="152" text-anchor="middle">Merchant portal</text></g>
+              <g class="n"><rect x="170" y="188" width="124" height="46" rx="10" /><text class="t" x="232" y="216" text-anchor="middle">Redirect service</text></g>
+              <g class="n"><rect x="310" y="60" width="124" height="46" rx="10" /><text class="t" x="372" y="88" text-anchor="middle">Merchant bot</text></g>
+              <g class="n acc"><rect x="310" y="124" width="124" height="46" rx="10" /><text class="t" x="372" y="144" text-anchor="middle">RDS MySQL</text><text x="372" y="160" text-anchor="middle">snapshots · DR</text></g>
+              <g class="n"><rect x="310" y="188" width="124" height="46" rx="10" /><text class="t" x="372" y="208" text-anchor="middle">Archival EC2</text><text x="372" y="224" text-anchor="middle">Python job</text></g>
+
+              <g class="n"><rect x="470" y="60" width="114" height="46" rx="10" /><text class="t" x="527" y="80" text-anchor="middle">ElastiCache</text><text x="527" y="96" text-anchor="middle">Valkey</text></g>
+              <g class="n"><rect x="470" y="124" width="114" height="46" rx="10" /><text class="t" x="527" y="144" text-anchor="middle">CloudWatch</text><text x="527" y="160" text-anchor="middle">logs · alerts</text></g>
+              <g class="n"><rect x="470" y="188" width="114" height="46" rx="10" /><text class="t" x="527" y="208" text-anchor="middle">Security Hub</text><text x="527" y="224" text-anchor="middle">PCI DSS</text></g>
+
+              <g class="n"><rect x="170" y="296" width="124" height="46" rx="10" /><text class="t" x="232" y="316" text-anchor="middle">EventBridge</text><text x="232" y="332" text-anchor="middle">month-end</text></g>
+              <g class="n"><rect x="310" y="296" width="124" height="46" rx="10" /><text class="t" x="372" y="316" text-anchor="middle">Lambda</text><text x="372" y="332" text-anchor="middle">starts archival</text></g>
+              <text class="lbl" x="16" y="324">archival automation</text>
+
+              <path class="e flow" d="M126 83 H168" />
+              <path class="e flow" d="M294 83 C302 83 302 140 308 140" />
+              <path class="e" d="M294 160 H308" />
+              <path class="e" d="M372 106 V122" />
+              <path class="e" d="M372 188 V172" />
+              <path class="e" d="M452 83 H468" />
+              <path class="e" d="M452 147 H468" />
+              <path class="e" d="M452 211 H468" />
+              <path class="e flow" d="M126 211 H148" />
+              <path class="e flow" d="M294 319 H308" />
+              <path class="e flow" d="M372 296 V236" />
+            </svg>
+              <div class="case-legend mono"><span><i class="lg lg-flow"></i>request / deploy flow</span><span><i class="lg lg-edge"></i>dependency</span><span><i class="lg lg-zone"></i>boundary</span></div>
+            </div>
+            <div class="panel-body">
+              <dl class="case-meta">
+                <div><dt>Problem</dt><dd>Keep a live payment gateway up 24/7 while transaction tables grow every month.</dd></div>
+                <div><dt>Solution</dt><dd>PHP stack on EC2 with RDS MySQL, zero-downtime CI/CD, and serverless month-end archival that keeps the production DB lean.</dd></div>
+              </dl>
+              <div class="impact"><div><b>24/7</b><span>payment availability</span></div><div><b>5</b><span>EC2 servers owned</span></div><div><b>PCI</b><span>DSS compliance alerts</span></div></div>
+            </div>
+            <ul class="chips"><li>EC2</li><li>RDS MySQL</li><li>Lambda</li><li>EventBridge</li><li>Valkey</li><li>GitHub Actions</li></ul>
+          </article>
+          <article class="case-panel" role="tabpanel" id="case-2" aria-labelledby="case-tab-2">
+            <header class="panel-head">
+              <div>
+                <p class="eyebrow">Platform · Enterprise client · 2026</p>
+                <h3>Cloud-native EKS platform &amp; lifecycle upgrades</h3>
+              </div>
+              <span class="case-num mono">02<span>/04</span></span>
+            </header>
+            <div class="case-visual card">
+              <div class="case-visual-bar mono"><span class="cv-file"><i class="fa-regular fa-file-code" aria-hidden="true"></i> eks-platform.svg</span><span class="cv-live"><span class="dot"></span> live</span></div>
+              <svg class="dg" viewBox="0 0 600 360" role="img" aria-label="Diagram: users sign in through Cognito with Azure AD SAML and reach workloads on EKS through an ALB Ingress. Workloads read secrets via the Secrets Store CSI driver, scale with Karpenter, and use RDS MySQL and ElastiCache Redis. GitHub Actions authenticates with OIDC and deploys with Helm.">
+              <rect class="zone" x="150" y="20" width="290" height="324" rx="14" />
+              <text class="zl" x="166" y="42">EKS 1.35 · 3 environments</text>
+              <text class="lbl" x="584" y="44" text-anchor="end">all in Terraform</text>
+
+              <g class="n"><rect x="16" y="60" width="110" height="46" rx="10" /><text class="t" x="71" y="80" text-anchor="middle">Cognito</text><text x="71" y="96" text-anchor="middle">Azure AD SAML</text></g>
+              <g class="n"><rect x="16" y="150" width="110" height="46" rx="10" /><text class="t" x="71" y="178" text-anchor="middle">Users</text></g>
+              <g class="n"><rect x="16" y="250" width="110" height="46" rx="10" /><text class="t" x="71" y="270" text-anchor="middle">GitHub Actions</text><text x="71" y="286" text-anchor="middle">OIDC → IAM</text></g>
+
+              <g class="n"><rect x="170" y="60" width="110" height="46" rx="10" /><text class="t" x="225" y="80" text-anchor="middle">Secrets Store</text><text x="225" y="96" text-anchor="middle">CSI driver</text></g>
+              <g class="n"><rect x="170" y="150" width="110" height="46" rx="10" /><text class="t" x="225" y="178" text-anchor="middle">ALB Ingress</text></g>
+              <g class="n"><rect x="170" y="250" width="110" height="46" rx="10" /><text class="t" x="225" y="270" text-anchor="middle">Helm</text><text x="225" y="286" text-anchor="middle">atomic deploy</text></g>
+              <g class="n acc"><rect x="310" y="130" width="112" height="56" rx="10" /><text class="t" x="366" y="154" text-anchor="middle">Workloads</text><text x="366" y="172" text-anchor="middle">pods</text></g>
+              <g class="n"><rect x="310" y="250" width="112" height="46" rx="10" /><text class="t" x="366" y="270" text-anchor="middle">Karpenter</text><text x="366" y="286" text-anchor="middle">node autoscaling</text></g>
+
+              <g class="n"><rect x="464" y="90" width="120" height="50" rx="10" /><text class="t" x="524" y="111" text-anchor="middle">RDS MySQL</text><text x="524" y="128" text-anchor="middle">Multi-AZ</text></g>
+              <g class="n"><rect x="464" y="200" width="120" height="50" rx="10" /><text class="t" x="524" y="221" text-anchor="middle">ElastiCache</text><text x="524" y="238" text-anchor="middle">Redis</text></g>
+
+              <path class="e" d="M71 150 V108" />
+              <path class="e flow" d="M126 173 H168" />
+              <path class="e flow" d="M280 173 C295 173 295 158 308 158" />
+              <path class="e" d="M280 83 C296 83 296 142 308 142" />
+              <path class="e" d="M422 150 C442 150 442 115 462 115" />
+              <path class="e" d="M422 170 C442 170 442 225 462 225" />
+              <path class="e flow" d="M126 273 H168" />
+              <path class="e flow" d="M280 265 C296 265 296 176 308 176" />
+              <path class="e" d="M366 250 V188" />
+            </svg>
+              <div class="case-legend mono"><span><i class="lg lg-flow"></i>request / deploy flow</span><span><i class="lg lg-edge"></i>dependency</span><span><i class="lg lg-zone"></i>boundary</span></div>
+            </div>
+            <div class="panel-body">
+              <dl class="case-meta">
+                <div><dt>Problem</dt><dd>Run three EKS environments and upgrade them without taking anything down.</dd></div>
+                <div><dt>Solution</dt><dd>Terraform-built EKS with Karpenter, keyless OIDC CI/CD and Helm atomic deploys; controlled node rotation with disruption budgets.</dd></div>
+              </dl>
+              <div class="impact"><div><b>3</b><span>environments</span></div><div><b>0</b><span>downtime EKS upgrade</span></div><div><b>1.6→1.13</b><span>Karpenter, live</span></div></div>
+            </div>
+            <ul class="chips"><li>EKS</li><li>Karpenter</li><li>Helm</li><li>Terraform</li><li>GitHub Actions</li><li>Cognito</li></ul>
+          </article>
+          <article class="case-panel" role="tabpanel" id="case-3" aria-labelledby="case-tab-3">
+            <header class="panel-head">
+              <div>
+                <p class="eyebrow">Migration · Enterprise client · 2025</p>
+                <h3>Azure multi-environment migration</h3>
+              </div>
+              <span class="case-num mono">03<span>/04</span></span>
+            </header>
+            <div class="case-visual card">
+              <div class="case-visual-bar mono"><span class="cv-file"><i class="fa-regular fa-file-code" aria-hidden="true"></i> azure-hub-spoke.svg</span><span class="cv-live"><span class="dot"></span> live</span></div>
+              <svg class="dg" viewBox="0 0 600 360" role="img" aria-label="Diagram: a central Azure hub network with firewall and Traffic Manager connected to five spoke environments: dev, beta, staging, prod and POC.">
+              <text class="zl" x="300" y="44" text-anchor="middle">4 subscriptions · 7 Terraform stacks</text>
+              <text class="lbl" x="300" y="64" text-anchor="middle">private endpoints · peering</text>
+
+              <path class="e" d="M150 75 L223 148" />
+              <path class="e" d="M450 75 L377 148" />
+              <path class="e" d="M150 285 L223 212" />
+              <path class="e flow" d="M450 285 L377 212" />
+              <path class="e" d="M300 222 V286" />
+
+              <g class="n"><rect x="30" y="40" width="120" height="58" rx="10" /><text class="t" x="90" y="65" text-anchor="middle">dev</text><text x="90" y="84" text-anchor="middle">AKS · Cosmos</text></g>
+              <g class="n"><rect x="450" y="40" width="120" height="58" rx="10" /><text class="t" x="510" y="65" text-anchor="middle">beta</text><text x="510" y="84" text-anchor="middle">AKS · Cosmos</text></g>
+              <g class="n"><rect x="30" y="262" width="120" height="58" rx="10" /><text class="t" x="90" y="287" text-anchor="middle">staging</text><text x="90" y="306" text-anchor="middle">AKS · Cosmos</text></g>
+              <g class="n acc"><rect x="450" y="262" width="120" height="58" rx="10" /><text class="t" x="510" y="287" text-anchor="middle">prod</text><text x="510" y="306" text-anchor="middle">Cosmos · 7 TB</text></g>
+              <g class="n"><rect x="240" y="288" width="120" height="50" rx="10" /><text class="t" x="300" y="309" text-anchor="middle">POC</text><text x="300" y="326" text-anchor="middle">sandbox</text></g>
+
+              <g class="n hub"><rect x="210" y="138" width="180" height="84" rx="14" /><text class="t" x="300" y="166" text-anchor="middle">Hub VNet</text><text x="300" y="186" text-anchor="middle">Azure Firewall</text><text x="300" y="204" text-anchor="middle">Traffic Manager</text></g>
+            </svg>
+              <div class="case-legend mono"><span><i class="lg lg-flow"></i>request / deploy flow</span><span><i class="lg lg-edge"></i>dependency</span><span><i class="lg lg-zone"></i>boundary</span></div>
+            </div>
+            <div class="panel-body">
+              <dl class="case-meta">
+                <div><dt>Problem</dt><dd>Move live production across 4 subscriptions without an outage.</dd></div>
+                <div><dt>Solution</dt><dd>Hub-spoke network, 7 Terraform stacks, Private Endpoints and Traffic Manager cutover.</dd></div>
+              </dl>
+              <div class="impact"><div><b>7 TB</b><span>Cosmos DB migrated</span></div><div><b>50+</b><span>resources in IaC</span></div><div><b>0</b><span>downtime cutover</span></div></div>
+            </div>
+            <ul class="chips"><li>Azure</li><li>Terraform</li><li>AKS</li><li>Cosmos DB</li><li>Redis</li><li>Service Bus</li></ul>
+          </article>
+          <article class="case-panel" role="tabpanel" id="case-4" aria-labelledby="case-tab-4">
+            <header class="panel-head">
+              <div>
+                <p class="eyebrow">EdTech · Enterprise client · 2025</p>
+                <h3>LMS platform for 100+ schools</h3>
+              </div>
+              <span class="case-num mono">04<span>/04</span></span>
+            </header>
+            <div class="case-visual card">
+              <div class="case-visual-bar mono"><span class="cv-file"><i class="fa-regular fa-file-code" aria-hidden="true"></i> lms-platform.svg</span><span class="cv-live"><span class="dot"></span> live</span></div>
+              <svg class="dg" viewBox="0 0 600 360" role="img" aria-label="Diagram: students and teachers reach an ECS Fargate cluster through a load balancer; services use RDS Aurora and EFS; a CI/CD pipeline builds to ECR and deploys automatically.">
+              <text class="zl" x="16" y="44">multi-env · dev / staging / prod</text>
+              <text class="lbl" x="584" y="44" text-anchor="end">109+ resources · Terraform</text>
+
+              <rect class="zone" x="284" y="78" width="160" height="184" rx="14" />
+              <text class="zl" x="300" y="100">ECS Fargate</text>
+
+              <g class="n"><rect x="16" y="148" width="118" height="50" rx="10" /><text class="t" x="75" y="170" text-anchor="middle">Students &amp;</text><text class="t" x="75" y="187" text-anchor="middle">teachers</text></g>
+              <g class="n"><rect x="166" y="150" width="90" height="46" rx="10" /><text class="t" x="211" y="178" text-anchor="middle">ALB</text></g>
+              <g class="n acc"><rect x="302" y="116" width="124" height="44" rx="10" /><text class="t" x="364" y="143" text-anchor="middle">Portal</text></g>
+              <g class="n acc"><rect x="302" y="190" width="124" height="44" rx="10" /><text class="t" x="364" y="217" text-anchor="middle">API services</text></g>
+              <g class="n"><rect x="472" y="110" width="112" height="50" rx="10" /><text class="t" x="528" y="132" text-anchor="middle">RDS Aurora</text><text x="528" y="149" text-anchor="middle">multi-AZ</text></g>
+              <g class="n"><rect x="472" y="196" width="112" height="50" rx="10" /><text class="t" x="528" y="218" text-anchor="middle">EFS</text><text x="528" y="235" text-anchor="middle">shared storage</text></g>
+              <g class="n"><rect x="166" y="296" width="278" height="46" rx="10" /><text class="t" x="305" y="317" text-anchor="middle">CI/CD → ECR</text><text x="305" y="333" text-anchor="middle">automated deploys · monitoring</text></g>
+
+              <path class="e" d="M134 173 H164" />
+              <path class="e flow" d="M256 173 C280 173 280 138 300 138" />
+              <path class="e flow" d="M256 173 C280 173 280 212 300 212" />
+              <path class="e" d="M426 138 H470" />
+              <path class="e" d="M426 212 C448 212 448 221 470 221" />
+              <path class="e acc-e" d="M364 294 V264" />
+            </svg>
+              <div class="case-legend mono"><span><i class="lg lg-flow"></i>request / deploy flow</span><span><i class="lg lg-edge"></i>dependency</span><span><i class="lg lg-zone"></i>boundary</span></div>
+            </div>
+            <div class="panel-body">
+              <dl class="case-meta">
+                <div><dt>Problem</dt><dd>A growing LMS with no IaC and manual deploys.</dd></div>
+                <div><dt>Solution</dt><dd>Multi-environment ECS Fargate, Aurora and EFS in Terraform, with automated CI/CD and monitoring.</dd></div>
+              </dl>
+              <div class="impact"><div><b>100+</b><span>schools served</span></div><div><b>109+</b><span>resources in IaC</span></div><div><b>Multi</b><span>environment</span></div></div>
+            </div>
+            <ul class="chips"><li>AWS</li><li>Terraform</li><li>ECS Fargate</li><li>RDS Aurora</li><li>EFS</li><li>CI/CD</li></ul>
+          </article>
+          </div>
+        </div>
+
+        <!-- More projects -->
+        <div class="more">
+          <div class="more-head">
+            <h3 class="more-title reveal">More projects</h3>
+            <div class="filters reveal" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all" aria-pressed="true">All <span class="mono fcount">9</span></button>
+            <button class="filter" data-filter="aws" aria-pressed="false">AWS <span class="mono fcount">5</span></button>
+            <button class="filter" data-filter="containers" aria-pressed="false">Containers &amp; K8s <span class="mono fcount">3</span></button>
+            <button class="filter" data-filter="security" aria-pressed="false">Security <span class="mono fcount">4</span></button>
+            <button class="filter" data-filter="networking" aria-pressed="false">Networking <span class="mono fcount">2</span></button>
+            </div>
+          </div>
+          <div class="projects-grid" id="projects-grid">
+            <article class="project card spot reveal" data-cat="containers">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Kubernetes · GitOps</span>
+              </div>
+              <h4>ArgoCD GitOps on AWS EKS</h4>
+              <p>Production-ready ArgoCD with TLS termination, IAM-mapped RBAC and persistent Redis.</p>
+              <p class="project-stack mono">EKS · ArgoCD · Helm</p>
+            </article>
+            <article class="project card spot reveal" data-cat="aws security">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-id-badge" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Identity · Full-stack</span>
+              </div>
+              <h4>Enterprise Identity Management Platform</h4>
+              <p>React admin panel on Cognito for user lifecycle and MFA management, shipped via IaC and CI/CD.</p>
+              <p class="project-stack mono">Cognito · React · Terraform</p>
+            </article>
+            <article class="project card spot reveal" data-cat="aws security">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Security · Blockchain</span>
+              </div>
+              <h4>Hyperledger Fabric on Managed Blockchain</h4>
+              <p>Multi-org blockchain network with decentralized identity, built on Zero Trust principles.</p>
+              <p class="project-stack mono">Managed Blockchain · Zero Trust</p>
+            </article>
+            <article class="project card spot reveal" data-cat="containers aws">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Containers · Messaging</span>
+              </div>
+              <h4>Rocket.Chat on ECS Fargate</h4>
+              <p>Self-hosted messaging on Fargate with MongoDB Atlas, fully automated in Terraform.</p>
+              <p class="project-stack mono">ECS Fargate · MongoDB Atlas</p>
+            </article>
+            <article class="project card spot reveal" data-cat="aws security">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Data · Sharing</span>
+              </div>
+              <h4>Cross-account S3 data sharing</h4>
+              <p>Private, encrypted sharing of large research datasets between AWS accounts.</p>
+              <p class="project-stack mono">S3 · IAM · KMS</p>
+            </article>
+            <article class="project card spot reveal" data-cat="networking security">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Networking · VPN</span>
+              </div>
+              <h4>WireGuard VPN on EC2</h4>
+              <p>VPN server with pre-configured clients for secure private access to AWS.</p>
+              <p class="project-stack mono">EC2 · WireGuard</p>
+            </article>
+            <article class="project card spot reveal" data-cat="containers">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Kubernetes · Bare metal</span>
+              </div>
+              <h4>Kolab Groupware on OKD</h4>
+              <p>Groupware on OpenShift (OKD) on Hetzner bare metal, with Rook-Ceph storage and MetalLB.</p>
+              <p class="project-stack mono">OKD · Rook-Ceph · MetalLB</p>
+            </article>
+            <article class="project card spot reveal" data-cat="aws">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+                <span class="project-tag mono">CI/CD · Serverless</span>
+              </div>
+              <h4>AWS serverless CI/CD pipeline</h4>
+              <p>Build-test-deploy for microservices on EKS with no CI servers to manage.</p>
+              <p class="project-stack mono">CodePipeline · CodeBuild · Lambda</p>
+            </article>
+            <article class="project card spot reveal" data-cat="networking">
+              <div class="project-top">
+                <span class="project-icon"><i class="fa-brands fa-wordpress" aria-hidden="true"></i></span>
+                <span class="project-tag mono">Migration · Multi-cloud</span>
+              </div>
+              <h4>WordPress lift-and-shift: AWS → Azure</h4>
+              <p>Live site migrated with scripted DB and file sync, then a clean DNS cutover.</p>
+              <p class="project-stack mono">Terraform · EC2 · Azure VM</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact card reveal">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <div class="contact-grid">
+            <div class="contact-intro">
+              <p class="eyebrow">06 — Contact</p>
+              <h2 class="contact-title">Let's build something <span class="hl">reliable.</span></h2>
+              <p class="contact-sub">Have a role or project in mind? I usually reply within a day.</p>
+
+              <p class="avail-line"><span class="dot"></span> Open to full-time, part-time, freelance &amp; consulting</p>
+
+              <div class="reach-email">
+                <a href="mailto:chnoman1213@gmail.com">
+                  <span class="reach-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                  <span>chnoman1213@gmail.com</span>
+                </a>
+                <button class="copy-btn" id="copy-email" data-email="chnoman1213@gmail.com" aria-label="Copy email address"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+              </div>
+
+              <ul class="reach-icons">
+                <li><a href="https://www.linkedin.com/in/nomanzulfiqar/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>LinkedIn</a></li>
+                <li><a href="https://github.com/NomanZulfiqar" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
+                <li><a href="tel:+923314748582"><i class="fa-solid fa-phone" aria-hidden="true"></i>Call</a></li>
+                <li><a href="./img/Noman_Zulfiqar_CV.pdf" download><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>Resume</a></li>
+              </ul>
+            </div>
+
+            <form class="form" id="contact-form" action="https://formsubmit.co/chnoman1213@gmail.com" method="POST" novalidate>
+              <div class="form-bar mono">
+                <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+                <span class="form-bar-title">new-message</span>
+                <span class="form-bar-secure"><i class="fa-solid fa-lock" aria-hidden="true"></i> secure</span>
+              </div>
+
+              <div class="form-body">
+                <!-- FormSubmit settings: formatted table email, reply-to the visitor, spam honeypot -->
+                <input type="hidden" name="_subject" value="New portfolio message">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://nomanzulfiqar.github.io/#contact">
+                <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <fieldset class="field">
+                  <legend>I'm interested in</legend>
+                  <div class="engagements">
+                    <label class="eng"><input type="radio" name="Topic" value="Full-time role" checked><span><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Full-time</span></label>
+                    <label class="eng"><input type="radio" name="Topic" value="Part-time role"><span><i class="fa-solid fa-clock" aria-hidden="true"></i>Part-time</span></label>
+                    <label class="eng"><input type="radio" name="Topic" value="Freelance project"><span><i class="fa-solid fa-rocket" aria-hidden="true"></i>Freelance</span></label>
+                    <label class="eng"><input type="radio" name="Topic" value="Consulting"><span><i class="fa-solid fa-comments" aria-hidden="true"></i>Consulting</span></label>
+                  </div>
+                </fieldset>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-name">Name</label>
+                    <div class="input-wrap"><i class="fa-regular fa-user" aria-hidden="true"></i><input id="f-name" name="Name" type="text" autocomplete="name" placeholder="Jane Smith" required minlength="2" maxlength="80"></div>
+                    <p class="field-error">Please enter your name.</p>
+                  </div>
+                  <div class="field">
+                    <label for="f-email">Email</label>
+                    <div class="input-wrap"><i class="fa-regular fa-envelope" aria-hidden="true"></i><input id="f-email" name="Email" type="email" autocomplete="email" placeholder="jane@company.com" required maxlength="120"></div>
+                    <p class="field-error">Please enter a valid email address.</p>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="f-msg">Message</label>
+                  <textarea id="f-msg" name="Message" rows="5" placeholder="What are you building, and how can I help?" required minlength="10" maxlength="3000"></textarea>
+                  <p class="field-error">Please write at least 10 characters.</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg form-submit">
+                  <span class="label">Send message</span> <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#nz-grad)" /><path d="M8 22.5V9.5l8 13V9.5h8l-8 13h8" fill="none" stroke="#062019" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <p>© <span id="year">2026</span> Noman Zulfiqar. All rights reserved.</p>
+      </div>
+      <ul class="footer-social" aria-label="Social links">
+        <li><a href="https://www.linkedin.com/in/nomanzulfiqar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="https://github.com/NomanZulfiqar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.facebook.com/noman.prince.779857" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/emm_nomi/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+      <a href="#top" class="to-top mono">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

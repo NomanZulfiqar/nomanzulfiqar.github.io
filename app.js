@@ -35,6 +35,15 @@
 	onScroll();
 	window.addEventListener('scroll', onScroll, { passive: true });
 
+	// ---------- Back to top / logo: always scroll to the very top ----------
+	document.querySelectorAll('a[href="#top"]').forEach((link) => {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+			history.replaceState(null, '', window.location.pathname + window.location.search);
+		});
+	});
+
 	// ---------- Mobile menu ----------
 	const menuBtn = document.getElementById('menu-btn');
 	const navLinks = document.querySelectorAll('.nav-links a');
@@ -362,7 +371,8 @@
 				submit.classList.remove('loading');
 				submitLabel.textContent = 'Send message';
 				status.className = 'form-status error';
-				status.innerHTML = html;
+				status.innerHTML = '<i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> ' + html;
+				status.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
 			};
 			const fallback = ' You can also email me directly at <a href="mailto:chnoman1213@gmail.com"><u>chnoman1213@gmail.com</u></a>.';
 
@@ -399,7 +409,7 @@
 				if (err.name === 'AbortError') {
 					fail('The mail service took too long to respond.' + fallback);
 				} else if (err.service && /activat/i.test(err.message)) {
-					fail('This form is waiting for activation by the site owner.' + fallback);
+					fail('Message not sent — this contact form hasn\'t been activated yet.' + fallback);
 				} else {
 					fail('Your message could not be sent' + (err.service ? ' (' + err.message.replace(/[<>&"]/g, '') + ').' : ' — please check your connection.') + fallback);
 				}

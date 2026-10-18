@@ -345,7 +345,6 @@
 				checks[results.indexOf(false)].el.focus();
 				return;
 			}
-			if (form.elements._honey.value) return; // bot
 
 			const name = form.elements.Name.value.trim();
 			const email = form.elements.Email.value.trim();

@@ -214,6 +214,42 @@
 		expEl.textContent = (y ? y + ' yr' + (y > 1 ? 's' : '') : '') + (y && m ? ' ' : '') + (m ? m + ' mo' : '');
 	}
 
+	// ---------- Career timeline chart: positioned against today's date ----------
+	const gantt = document.querySelector('.gantt');
+	if (gantt) {
+		const now = new Date();
+		const AXIS_START = new Date(2021, 8, 1); // Sep 2021, just before the degree started
+		const monthIndex = (d) => (d.getFullYear() - AXIS_START.getFullYear()) * 12 + d.getMonth() - AXIS_START.getMonth();
+		const parse = (v) => {
+			const [y, m] = v.split('-').map(Number);
+			return new Date(y, m - 1, 1);
+		};
+		const today = monthIndex(now) + (now.getDate() - 1) / new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+
+		// Axis grows with time: always about three months of room after today
+		const axisEnd = Math.ceil(today + 3);
+		const pct = (v) => (v / axisEnd * 100).toFixed(2) + '%';
+
+		gantt.style.setProperty('--today', pct(today));
+
+		gantt.querySelectorAll('.g-bar[data-start]').forEach((bar) => {
+			const start = monthIndex(parse(bar.dataset.start));
+			const end = bar.dataset.end === 'now' ? today : monthIndex(parse(bar.dataset.end)) + 1;
+			bar.style.setProperty('--s', pct(start));
+			bar.style.setProperty('--w', pct(Math.max(end - start, 0.5)));
+		});
+
+		const axis = gantt.querySelector('.g-axis');
+		if (axis) {
+			const ticks = [];
+			for (let y = AXIS_START.getFullYear() + 1; monthIndex(new Date(y, 0, 1)) < axisEnd; y++) {
+				if (Math.abs(monthIndex(new Date(y, 0, 1)) - today) < 4) continue; // keep clear of the "today" label
+				ticks.push('<span style="left: ' + pct(monthIndex(new Date(y, 0, 1))) + '">' + y + '</span>');
+			}
+			axis.innerHTML = ticks.join('') + '<span class="g-today" style="left: var(--today)">today</span>';
+		}
+	}
+
 	// ---------- Case study tabs ----------
 	const tabs = Array.from(document.querySelectorAll('.case-tab'));
 	const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));

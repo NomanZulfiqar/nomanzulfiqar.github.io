@@ -340,6 +340,8 @@
 			e.preventDefault();
 			const results = checks.map(validate);
 			if (results.includes(false)) {
+				status.className = 'form-status error';
+				status.innerHTML = '<i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Please fix the highlighted fields — the message needs at least 10 characters.';
 				checks[results.indexOf(false)].el.focus();
 				return;
 			}
@@ -360,6 +362,8 @@
 				_captcha: 'false',
 			};
 
+			status.className = 'form-status';
+			status.textContent = '';
 			submit.disabled = true;
 			submit.classList.add('loading');
 			submitLabel.textContent = 'Sending…';
